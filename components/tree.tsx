@@ -1,4 +1,3 @@
-"use client";
 
 import { ReactNode, ComponentProps } from "react";
 import { Sidebar } from "./sidebar";

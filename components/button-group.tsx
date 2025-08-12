@@ -1,5 +1,3 @@
-"use client";
-
 import { ComponentProps, createContext, useContext, ReactNode } from "react";
 import { type VariantProps } from "class-variance-authority";
 import { cn } from "@/src/ui/lib/utils";

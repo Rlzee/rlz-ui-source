@@ -1,4 +1,3 @@
-"use client";
 
 import { ComponentProps, createContext, useContext } from "react";
 import * as SheetPrimitive from "@radix-ui/react-dialog";

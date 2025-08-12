@@ -1,5 +1,3 @@
-"use client";
-
 import { ComponentProps } from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDownIcon, type LucideIcon } from "lucide-react";

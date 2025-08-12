@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/src/ui/lib/utils";
 import { X } from "lucide-react";
 import { ComponentProps, useState } from "react";

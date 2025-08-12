@@ -1,4 +1,3 @@
-"use client";
 
 import { ComponentProps, ReactNode } from "react";
 import { Command as CommandPrimitive } from "cmdk";

@@ -1,5 +1,3 @@
-"use client";
-
 import { Dialog } from "@/src/ui/components/dialog";
 import { Button, ButtonVariant } from "@/src/ui/components/button";
 import { useDialog } from "@/src/ui/stores/dialog.store";

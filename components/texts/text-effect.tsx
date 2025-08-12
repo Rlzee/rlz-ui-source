@@ -1,4 +1,3 @@
-"use client";
 
 import { CSSProperties, ReactNode } from "react";
 import { motion, HTMLMotionProps } from "framer-motion";

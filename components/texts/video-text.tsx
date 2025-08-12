@@ -1,4 +1,3 @@
-"use client";
 
 import { cn } from "@/src/ui/lib/utils";
 import { ElementType, ReactNode, useEffect, useState, Children } from "react";

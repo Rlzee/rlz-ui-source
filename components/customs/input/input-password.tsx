@@ -1,4 +1,3 @@
-"use client";
 
 import { InputAddon } from "@/src/ui/components/input-addon";
 import { Eye, EyeOff } from "lucide-react";

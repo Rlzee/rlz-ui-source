@@ -1,4 +1,3 @@
-"use client";
 
 import { Button } from "@/src/ui/components/button";
 import { Kbd } from "@/src/ui/components/kbd";

@@ -1,4 +1,3 @@
-"use client";
 
 import { ComponentProps, useEffect, useState } from "react";
 import { MoonStar, SunDim } from "lucide-react";

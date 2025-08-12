@@ -1,4 +1,3 @@
-"use client";
 
 import { ComponentProps } from "react";
 import { GripVerticalIcon } from "lucide-react";

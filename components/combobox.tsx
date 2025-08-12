@@ -1,4 +1,3 @@
-"use client";
 
 import { ComponentProps } from "react";
 import { ChevronsUpDown, ChevronDown, ChevronUp } from "lucide-react";

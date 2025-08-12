@@ -1,4 +1,3 @@
-"use client";
 
 import { useId, useRef, useState, ComponentProps } from "react";
 import { Terminal } from "lucide-react";
