@@ -1,7 +1,6 @@
 
 import { cn } from "@/src/ui/lib/utils";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
-import { de } from "date-fns/locale";
 import {
   ComponentProps,
   ReactNode,

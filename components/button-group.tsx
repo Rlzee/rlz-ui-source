@@ -1,7 +1,7 @@
 import { ComponentProps, createContext, useContext, ReactNode } from "react";
 import { type VariantProps } from "class-variance-authority";
 import { cn } from "@/src/ui/lib/utils";
-import { buttonVariants } from "./button";
+import { buttonVariants } from "@/src/ui/components/button";
 import { Slot } from "@radix-ui/react-slot";
 
 /* --------------------------- Context Button Group --------------------------- */

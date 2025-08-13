@@ -1,7 +1,7 @@
 
 import { ReactNode, ComponentProps } from "react";
-import { Sidebar } from "./sidebar";
-import { Collapsible } from "./collapsible";
+import { Sidebar } from "@/src/ui/components/sidebar";
+import { Collapsible } from "@/src/ui/components/collapsible";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/src/ui/lib/utils";
 

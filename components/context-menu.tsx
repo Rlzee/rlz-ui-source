@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import { DropdownMenu } from "./dropdown-menu";
+import { DropdownMenu } from "@/src/ui/components/dropdown-menu";
 import { cn } from "@/src/ui/lib/utils";
 import { Slot } from "@radix-ui/react-slot";
 
