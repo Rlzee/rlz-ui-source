@@ -1,0 +1,8 @@
+{
+  "files": [
+    "components/dialog.tsx",
+    "components/button.tsx",
+    "stores/dialog.store.ts",
+    "helpers/dialog.helper.ts"
+  ]
+}
