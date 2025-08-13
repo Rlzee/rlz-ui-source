@@ -1,4 +1,5 @@
 {
   "files": ["stores/dialog.store.ts", "helpers/dialog.helper.ts"],
-  "components": ["dialog", "button"]
+  "components": ["dialog", "button"],
+  "dependencies": ["zustand"]
 }
