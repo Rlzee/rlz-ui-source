@@ -1,8 +1,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useToastStore } from "@/src/ui/stores/toast.store";
-import { Button } from "@/src/ui/components/button";
-import { cn } from "@/src/ui/lib/utils";
+import { useToastStore } from "@ui/stores/toast.store";
+import { Button } from "@ui/components/button";
+import { cn } from "@ui/lib/utils";
 import { CheckCircle, AlertCircle, Info, AlertTriangle } from "lucide-react";
 
 const variantDetails = {

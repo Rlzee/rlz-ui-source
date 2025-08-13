@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 type Orientation = "top" | "right" | "bottom" | "left" | "x" | "y";
 type Animation = "bottom" | "top" | "left" | "right";

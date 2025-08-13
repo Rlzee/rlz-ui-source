@@ -1,10 +1,10 @@
 
 import { useId, useRef, useState, ComponentProps } from "react";
 import { Terminal } from "lucide-react";
-import { cn } from "@/src/ui/lib/utils";
-import { InputAddon } from "@/src/ui/components/input-addon";
-import { Toggle } from "@/src/ui/components/toggle";
-import { Clipboard } from "@/src/ui/components/custom/button/clipboard";
+import { cn } from "@ui/lib/utils";
+import { InputAddon } from "@ui/components/input-addon";
+import { Toggle } from "@ui/components/toggle";
+import { Clipboard } from "@ui/components/custom/button/clipboard";
 
 interface InputCopyProps extends ComponentProps<typeof InputAddon> {
   value: string;

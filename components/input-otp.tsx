@@ -10,8 +10,8 @@ import {
   useRef,
   Children,
 } from "react";
-import { Input } from "@/src/ui/components/input";
-import { cn } from "@/src/ui/lib/utils";
+import { Input } from "@ui/components/input";
+import { cn } from "@ui/lib/utils";
 
 /* ---------------------------- Context Input Otp ---------------------------- */
 

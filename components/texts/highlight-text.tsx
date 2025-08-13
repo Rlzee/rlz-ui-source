@@ -1,7 +1,7 @@
 
 import { useState, ReactNode, CSSProperties } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 /* ------------------------------ Types ------------------------------ */
 

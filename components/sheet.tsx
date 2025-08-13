@@ -2,7 +2,7 @@
 import { ComponentProps, createContext, useContext } from "react";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 /* ------------------------------ Context Sheet ------------------------------ */
 

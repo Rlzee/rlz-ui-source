@@ -1,6 +1,6 @@
 
 import { ComponentProps } from "react";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 interface SeparatorProps extends ComponentProps<"div"> {
   orientation?: "horizontal" | "vertical";

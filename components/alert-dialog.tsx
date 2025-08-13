@@ -1,6 +1,6 @@
-import { Dialog } from "@/src/ui/components/dialog";
-import { Button, ButtonVariant } from "@/src/ui/components/button";
-import { useDialog } from "@/src/ui/stores/dialog.store";
+import { Dialog } from "@ui/components/dialog";
+import { Button, ButtonVariant } from "@ui/components/button";
+import { useDialog } from "@ui/stores/dialog.store";
 import { useId } from "react";
 
 const ALERT_DIALOG_NAME = "alert-dialog";

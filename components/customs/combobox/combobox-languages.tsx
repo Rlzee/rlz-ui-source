@@ -9,9 +9,9 @@ import {
   ComboboxItem,
   ComboboxGroup,
   ComboboxTriggerButton,
-} from "@/src/ui/components/combobox";
+} from "@ui/components/combobox";
 import { Check } from "lucide-react";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 const languageCodes = [
   "aa",

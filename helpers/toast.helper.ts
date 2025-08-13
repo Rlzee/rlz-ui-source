@@ -1,6 +1,6 @@
-import { useToastStore } from "@/src/ui/stores/toast.store";
+import { useToastStore } from "@ui/stores/toast.store";
 import { nanoid } from "nanoid";
-import { Toast } from "@/src/ui/stores/toast.store";
+import { Toast } from "@ui/stores/toast.store";
 
 export function toast(params: Omit<Toast, "id">) {
   const id = nanoid();

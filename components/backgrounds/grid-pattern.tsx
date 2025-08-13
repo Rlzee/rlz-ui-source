@@ -1,5 +1,5 @@
 import { useId } from "react";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 interface GridPatternProps extends React.SVGProps<SVGSVGElement> {
   width?: number;

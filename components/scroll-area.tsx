@@ -1,7 +1,7 @@
 
 import { ComponentProps } from "react";
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 /* ------------------------------ Root Scroll Area ------------------------------ */
 

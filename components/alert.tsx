@@ -1,4 +1,4 @@
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 import { ComponentProps, ReactNode } from "react";
 import { cva, VariantProps } from "class-variance-authority";
 

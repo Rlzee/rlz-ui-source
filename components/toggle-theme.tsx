@@ -2,8 +2,8 @@
 import { ComponentProps, useEffect, useState } from "react";
 import { MoonStar, SunDim } from "lucide-react";
 import { useTheme } from "next-themes";
-import { cn } from "@/src/ui/lib/utils";
-import { Button } from "@/src/ui/components/button";
+import { cn } from "@ui/lib/utils";
+import { Button } from "@ui/components/button";
 
 const ThemeToggle = ({ className }: ComponentProps<typeof Button>) => {
   const [mounted, setMounted] = useState(false);

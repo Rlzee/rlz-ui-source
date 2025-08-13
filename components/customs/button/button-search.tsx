@@ -1,9 +1,9 @@
 
-import { Button } from "@/src/ui/components/button";
-import { Kbd } from "@/src/ui/components/kbd";
-import { cn } from "@/src/ui/lib/utils";
-import { COMMAND_DIALOG_NAME } from "@/src/ui/components/command";
-import { useDialog } from "@/src/ui/stores/dialog.store";
+import { Button } from "@ui/components/button";
+import { Kbd } from "@ui/components/kbd";
+import { cn } from "@ui/lib/utils";
+import { COMMAND_DIALOG_NAME } from "@ui/components/command";
+import { useDialog } from "@ui/stores/dialog.store";
 
 interface ButtonSearchProps {
   className?: string;

@@ -3,9 +3,9 @@ import { ComponentProps, ReactNode } from "react";
 import { Command as CommandPrimitive } from "cmdk";
 import { SearchIcon } from "lucide-react";
 import { Kbd } from "./kbd";
-import { cn } from "@/src/ui/lib/utils";
-import { Dialog } from "@/src/ui/components/dialog";
-import { useDialog } from "@/src/ui/stores/dialog.store";
+import { cn } from "@ui/lib/utils";
+import { Dialog } from "@ui/components/dialog";
+import { useDialog } from "@ui/stores/dialog.store";
 
 const COMMAND_DIALOG_NAME = "command-dialog";
 

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { ButtonVariant } from "@/src/ui/components/button";
+import { ButtonVariant } from "@ui/components/button";
 
 export type ToastType = "success" | "error" | "warning" | "info";
 

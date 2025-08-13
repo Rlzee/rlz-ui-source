@@ -4,7 +4,7 @@ import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cva, VariantProps } from "class-variance-authority";
 import { ChevronDownIcon } from "lucide-react";
 import Link from "next/link";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 /* ------------------------------ Root Navigation Menu ------------------------------ */
 

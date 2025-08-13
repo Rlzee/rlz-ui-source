@@ -1,7 +1,7 @@
 
 import { ComponentProps } from "react";
 import { Drawer as DrawerPrimitive } from "vaul";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 /* ------------------------------ Root Drawer ------------------------------ */
 

@@ -8,7 +8,7 @@ import {
 } from "react";
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../lib/utils";
-import { useIsMobile } from "@/src/ui/hooks/use-mobile";
+import { useIsMobile } from "@ui/hooks/use-mobile";
 import { Slot } from "@radix-ui/react-slot";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";

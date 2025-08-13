@@ -2,8 +2,8 @@
 import { ComponentProps } from "react";
 import * as MenubarPrimitive from "@radix-ui/react-menubar";
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
-import { Kbd } from "@/src/ui/components/kbd";
-import { cn } from "@/src/ui/lib/utils";
+import { Kbd } from "@ui/components/kbd";
+import { cn } from "@ui/lib/utils";
 
 /* ------------------------------ Root Menubar ------------------------------ */
 

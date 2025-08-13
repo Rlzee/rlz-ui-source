@@ -1,6 +1,6 @@
 
 import { useEffect, useState, ComponentProps } from "react";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 interface KbdProps extends ComponentProps<"kbd"> {
   className?: string;

@@ -1,9 +1,9 @@
 
 import { ReactNode, ComponentProps } from "react";
-import { Sidebar } from "@/src/ui/components/sidebar";
-import { Collapsible } from "@/src/ui/components/collapsible";
+import { Sidebar } from "@ui/components/sidebar";
+import { Collapsible } from "@ui/components/collapsible";
 import { ChevronRight } from "lucide-react";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 /* --------------------------- Root Tree --------------------------- */
 

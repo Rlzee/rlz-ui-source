@@ -1,8 +1,8 @@
 
 import { useState } from "react";
 import { CheckIcon, CopyIcon } from "lucide-react";
-import { cn } from "@/src/ui/lib/utils";
-import { Tooltip } from "@/src/ui/components/tooltip";
+import { cn } from "@ui/lib/utils";
+import { Tooltip } from "@ui/components/tooltip";
 
 type ClipboardSize = "sm" | "md" | "lg";
 

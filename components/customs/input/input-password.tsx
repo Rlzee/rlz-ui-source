@@ -1,7 +1,7 @@
 
-import { InputAddon } from "@/src/ui/components/input-addon";
+import { InputAddon } from "@ui/components/input-addon";
 import { Eye, EyeOff } from "lucide-react";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 import { ComponentProps, useState } from "react";
 
 const InputPassword = ({

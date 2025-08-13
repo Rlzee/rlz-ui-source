@@ -9,12 +9,12 @@ import React, {
 } from "react";
 import { ComponentProps } from "react";
 import { ChevronsUpDown, ChevronDown, ChevronUp } from "lucide-react";
-import { Command } from "@/src/ui/components/command";
-import { Popover } from "@/src/ui/components/popover";
-import { Button } from "@/src/ui/components/button";
-import { cn } from "@/src/ui/lib/utils";
-import { Combobox } from "@/src/ui/components/combobox";
-import { Checkbox } from "@/src/ui/components/checkbox";
+import { Command } from "@ui/components/command";
+import { Popover } from "@ui/components/popover";
+import { Button } from "@ui/components/button";
+import { cn } from "@ui/lib/utils";
+import { Combobox } from "@ui/components/combobox";
+import { Checkbox } from "@ui/components/checkbox";
 
 /* ------------------------------ Multi Combobox Context ------------------------------ */
 

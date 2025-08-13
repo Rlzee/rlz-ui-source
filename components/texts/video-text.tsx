@@ -1,5 +1,5 @@
 
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 import { ElementType, ReactNode, useEffect, useState, Children } from "react";
 
 type VideoTextProps = {

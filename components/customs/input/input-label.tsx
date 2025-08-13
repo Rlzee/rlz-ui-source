@@ -1,7 +1,7 @@
 
 import { useId } from "react";
-import { Input } from "@/src/ui/components/input";
-import { cn } from "@/src/ui/lib/utils";
+import { Input } from "@ui/components/input";
+import { cn } from "@ui/lib/utils";
 
 interface InputLabelProps extends React.ComponentProps<typeof Input> {
   labelText?: string;

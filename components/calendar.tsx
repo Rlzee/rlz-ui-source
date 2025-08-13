@@ -2,8 +2,8 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ComponentProps } from "react";
 import { DayPicker } from "react-day-picker";
-import { cn } from "@/src/ui/lib/utils";
-import { buttonVariants } from "@/src/ui/components/button";
+import { cn } from "@ui/lib/utils";
+import { buttonVariants } from "@ui/components/button";
 import { enUS, fr, faIR, arSA, de, es, ja, ru } from "date-fns/locale";
 
 export const locales = {

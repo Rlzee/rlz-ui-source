@@ -12,13 +12,13 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, VariantProps } from "class-variance-authority";
 import { PanelLeftIcon } from "lucide-react";
 
-import { useIsMobile } from "@/src/ui/hooks/use-mobile";
-import { cn } from "@/src/ui/lib/utils";
-import { Button } from "@/src/ui/components/button";
-import { Input } from "@/src/ui/components/input";
-import { Separator } from "@/src/ui/components/separator";
-import { Sheet } from "@/src/ui/components/sheet";
-import { Tooltip } from "@/src/ui/components/tooltip";
+import { useIsMobile } from "@ui/hooks/use-mobile";
+import { cn } from "@ui/lib/utils";
+import { Button } from "@ui/components/button";
+import { Input } from "@ui/components/input";
+import { Separator } from "@ui/components/separator";
+import { Sheet } from "@ui/components/sheet";
+import { Tooltip } from "@ui/components/tooltip";
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;

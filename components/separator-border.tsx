@@ -1,5 +1,5 @@
 
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 import { motion, type HTMLMotionProps } from "framer-motion";
 
 type Orientation = "horizontal" | "vertical";

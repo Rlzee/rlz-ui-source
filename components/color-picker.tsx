@@ -6,7 +6,7 @@ import {
   useContext,
   ReactNode,
 } from "react";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 import Saturation from "@uiw/react-color-saturation";
 import { Slider } from "./slider";
 import {
@@ -19,9 +19,9 @@ import {
 } from "@uiw/color-convert";
 import { Combobox } from "./combobox";
 import { Check } from "lucide-react";
-import { InputCopy } from "@/src/ui/components/custom/input/input-copy";
+import { InputCopy } from "@ui/components/custom/input/input-copy";
 import { PipetteIcon } from "lucide-react";
-import { Button } from "@/src/ui/components/button";
+import { Button } from "@ui/components/button";
 
 /* ---------------------------------- Types ---------------------------------- */
 

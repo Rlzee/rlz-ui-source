@@ -14,7 +14,7 @@ import {
   Transition,
   type MotionProps,
 } from "framer-motion";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 type RotatingTextRef = {
   next: () => void;

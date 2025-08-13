@@ -1,7 +1,7 @@
 
 import { ComponentProps, useMemo } from "react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 /* ------------------------------ Root Slider ------------------------------ */
 

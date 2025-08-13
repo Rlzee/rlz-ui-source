@@ -1,5 +1,5 @@
 import React, { useRef, useCallback } from "react";
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 interface GlareHoverProps {
   width?: string;

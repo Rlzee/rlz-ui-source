@@ -6,8 +6,8 @@ import {
   oneDark,
   oneLight,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { Clipboard } from "@/src/ui/components/custom/button/clipboard";
-import { cn } from "@/src/ui/lib/utils";
+import { Clipboard } from "@ui/components/custom/button/clipboard";
+import { cn } from "@ui/lib/utils";
 
 interface CodeWrapperProps {
   code: string;

@@ -9,7 +9,7 @@ import {
   useState,
 } from "react";
 
-import { cn } from "@/src/ui/lib/utils";
+import { cn } from "@ui/lib/utils";
 
 interface AnimatedGridPatternProps extends ComponentPropsWithoutRef<"svg"> {
   width?: number;
