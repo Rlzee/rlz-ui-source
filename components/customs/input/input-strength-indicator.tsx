@@ -1,4 +1,3 @@
-
 import { useId, useMemo, useState } from "react";
 import { CheckIcon, XIcon } from "lucide-react";
 import { InputPassword } from "./input-password";

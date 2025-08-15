@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from "react";
 import { Renderer, Program, Mesh, Triangle } from "ogl";
 

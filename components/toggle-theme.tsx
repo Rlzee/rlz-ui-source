@@ -1,4 +1,3 @@
-
 import { ComponentProps, useEffect, useState } from "react";
 import { MoonStar, SunDim } from "lucide-react";
 import { useTheme } from "next-themes";

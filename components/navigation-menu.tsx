@@ -1,4 +1,3 @@
-
 import { ComponentProps, ComponentPropsWithoutRef } from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cva, VariantProps } from "class-variance-authority";

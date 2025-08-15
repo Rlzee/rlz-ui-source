@@ -1,4 +1,3 @@
-
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";

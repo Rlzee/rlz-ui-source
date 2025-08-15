@@ -1,4 +1,3 @@
-
 import { ComponentProps } from "react";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { cn } from "@ui/lib/utils";

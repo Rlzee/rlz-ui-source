@@ -1,4 +1,3 @@
-
 import { ReactNode, ComponentProps } from "react";
 import { Sidebar } from "@ui/components/sidebar";
 import { Collapsible } from "@ui/components/collapsible";

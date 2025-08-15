@@ -1,4 +1,3 @@
-
 import { AnimatePresence, motion } from "framer-motion";
 import { useToastStore } from "@ui/stores/toast.store";
 import { Button } from "@ui/components/button";

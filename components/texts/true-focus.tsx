@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState, CSSProperties } from "react";
 import { motion } from "framer-motion";
 

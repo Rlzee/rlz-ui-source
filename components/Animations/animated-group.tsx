@@ -1,4 +1,3 @@
-
 import { useRef } from "react";
 import { motion, useInView, Variants } from "framer-motion";
 import { cn } from "@ui/lib/utils";

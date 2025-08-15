@@ -1,4 +1,3 @@
-
 import { cn } from "@ui/lib/utils";
 import { motion, MotionProps, useScroll } from "framer-motion";
 import React from "react";
