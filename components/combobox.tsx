@@ -2,7 +2,7 @@ import { ComponentProps } from "react";
 import { ChevronsUpDown, ChevronDown, ChevronUp } from "lucide-react";
 import { Command } from "@ui/components/command";
 import { Popover } from "@ui/components/popover";
-import { Button } from "./button";
+import { Button } from "@ui/components/button";
 import { cn } from "@ui/lib/utils";
 
 /* ------------------------------ Root Combobox ------------------------------ */

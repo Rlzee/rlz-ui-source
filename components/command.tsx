@@ -1,12 +1,12 @@
 import { ComponentProps, ReactNode } from "react";
 import { Command as CommandPrimitive } from "cmdk";
 import { SearchIcon } from "lucide-react";
-import { Kbd } from "./kbd";
+import { Kbd } from "@ui/components/kbd";
 import { cn } from "@ui/lib/utils";
 import { Dialog } from "@ui/components/dialog";
 import { useDialog } from "@ui/stores/dialog.store";
 
-const COMMAND_DIALOG_NAME = "command-dialog";
+export const CommandDialogName = "command-dialog";
 
 /* ------------------------------ Root Command ------------------------------ */
 
@@ -18,7 +18,7 @@ const Command = ({
     <CommandPrimitive
       data-slot="command"
       className={cn(
-        "bg-popover text-popover-foreground flex h-full w-full flex-col overflow-hidden rounded-md",
+        "bg-background-secondary text-foreground flex h-full w-full flex-col overflow-hidden rounded-md",
         className
       )}
       {...props}
@@ -42,10 +42,13 @@ const CommandDialog = ({
   className,
 }: CommandDialogProps) => {
   const { getDialogState, closeDialog } = useDialog();
-  const isOpen = getDialogState(COMMAND_DIALOG_NAME);
+  const isOpen = getDialogState(CommandDialogName);
 
   return (
-    <Dialog open={isOpen} onOpenChange={() => closeDialog(COMMAND_DIALOG_NAME)}>
+    <CommandPrimitive.Dialog
+      open={isOpen}
+      onOpenChange={() => closeDialog(CommandDialogName)}
+    >
       <Dialog.Header className="sr-only">
         <Dialog.Title>{title}</Dialog.Title>
         <Dialog.Description>{description}</Dialog.Description>
@@ -58,7 +61,7 @@ const CommandDialog = ({
           {children}
         </Command>
       </Dialog.Content>
-    </Dialog>
+    </CommandPrimitive.Dialog>
   );
 };
 
@@ -80,13 +83,13 @@ const CommandInput = ({
   return (
     <div
       data-slot="command-input-wrapper"
-      className="flex items-center gap-2 border-b border-border px-3 py-2"
+      className="flex h-9 items-center gap-2 px-3"
     >
-      <SearchIcon className="size-5 shrink-0 opacity-50" />
+      <SearchIcon className="size-4 shrink-0 opacity-50" />
       <CommandPrimitive.Input
         data-slot="command-input"
         className={cn(
-          "placeholder:text-muted-foreground flex w-full rounded-md bg-transparent py-3 text-base outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
+          "placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         {...props}
@@ -95,14 +98,14 @@ const CommandInput = ({
         <Kbd
           className="hidden sm:flex items-center gap-1 px-1.5 py-0.5 text-[12px] font-mono rounded-md shadow-sm transition cursor-pointer"
           shortcutKey="Esc"
-          onClick={() => closeDialog(COMMAND_DIALOG_NAME)}
+          onClick={() => closeDialog(CommandDialogName)}
         />
       )}
     </div>
   );
 };
 
-/* ----------------------------- Command List ----------------------------- */
+/* ---------------------------- Command List ----------------------------- */
 
 const CommandList = ({
   className,
@@ -116,7 +119,7 @@ const CommandList = ({
         msOverflowStyle: "none",
       }}
       className={cn(
-        "max-h-[300px] overflow-x-hidden overflow-y-auto",
+        "max-h-[300px] overflow-x-hidden overflow-y-auto border-t border-border",
         className
       )}
       {...props}
@@ -124,21 +127,37 @@ const CommandList = ({
   );
 };
 
-/* ----------------------------- Command Empty ----------------------------- */
+/* ---------------------------- Command Loading ----------------------------- */
 
-const CommandEmpty = ({
+const CommandLoading = ({
+  className,
   ...props
-}: ComponentProps<typeof CommandPrimitive.Empty>) => {
+}: ComponentProps<typeof CommandPrimitive.Loading>) => {
   return (
-    <CommandPrimitive.Empty
-      data-slot="command-empty"
-      className="py-6 text-center text-sm"
+    <CommandPrimitive.Loading
+      data-slot="command-loading"
+      className={cn("flex items-center justify-center", className)}
       {...props}
     />
   );
 };
 
-/* ----------------------------- Command Group ----------------------------- */
+/* ---------------------------- Command Empty ----------------------------- */
+
+const CommandEmpty = ({
+  className,
+  ...props
+}: ComponentProps<typeof CommandPrimitive.Empty>) => {
+  return (
+    <CommandPrimitive.Empty
+      data-slot="command-empty"
+      className={cn("py-4 text-center text-muted-foreground", className)}
+      {...props}
+    />
+  );
+};
+
+/* ---------------------------- Command Group ----------------------------- */
 
 const CommandGroup = ({
   className,
@@ -156,7 +175,25 @@ const CommandGroup = ({
   );
 };
 
-/* ----------------------------- Command Separator ----------------------------- */
+/* ---------------------------- Command Item ----------------------------- */
+
+const CommandItem = ({
+  className,
+  ...props
+}: ComponentProps<typeof CommandPrimitive.Item>) => {
+  return (
+    <CommandPrimitive.Item
+      data-slot="command-item"
+      className={cn(
+        "data-[selected=true]:bg-secondary [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        className
+      )}
+      {...props}
+    />
+  );
+};
+
+/* ---------------------------- Command Separator ----------------------------- */
 
 const CommandSeparator = ({
   className,
@@ -171,42 +208,24 @@ const CommandSeparator = ({
   );
 };
 
-/* ----------------------------- Command Item ----------------------------- */
-
-const CommandItem = ({
-  className,
-  ...props
-}: ComponentProps<typeof CommandPrimitive.Item>) => {
-  return (
-    <CommandPrimitive.Item
-      data-slot="command-item"
-      className={cn(
-        "data-[selected=true]:bg-secondary data-[selected=true]:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
-        className
-      )}
-      {...props}
-    />
-  );
-};
-
 /* ----------------------------- Command Shortcut ----------------------------- */
 
 interface CommandShortcutProps {
-  className?: string;
   shortcutKey?: string;
+  className?: string;
   children?: ReactNode;
 }
 
 const CommandShortcut = ({
-  className,
   shortcutKey = "",
+  className,
   children,
 }: CommandShortcutProps) => {
   if (children) {
     return (
       <span
         data-slot="command-shortcut"
-        className={cn("tracking-widest ml-auto", className)}
+        className={cn("ml-auto flex items-center", className)}
       >
         {children}
       </span>
@@ -216,34 +235,54 @@ const CommandShortcut = ({
   return (
     <Kbd
       data-slot="command-shortcut"
-      className={cn("tracking-widest ml-auto", className)}
+      className={cn("ml-auto tracking-widest", className)}
       shortcutKey={shortcutKey}
     />
   );
 };
+/* ----------------------------- Command Footer ----------------------------- */
 
-/* ----------------------------- Exports ----------------------------- */
+const CommandFooter = ({
+  className,
+  children,
+  ...props
+}: ComponentProps<"footer">) => {
+  return (
+    <footer
+      data-slot="command-footer"
+      className={cn("py-4 border-t border-border", className)}
+      {...props}
+    >
+      {children}
+    </footer>
+  );
+};
+
+/* ---------------------------- Exports ----------------------------- */
 
 const CommandComposed = Object.assign(Command, {
   Dialog: CommandDialog,
   Input: CommandInput,
   List: CommandList,
+  Loading: CommandLoading,
   Empty: CommandEmpty,
   Group: CommandGroup,
-  Separator: CommandSeparator,
   Item: CommandItem,
+  Separator: CommandSeparator,
   Shortcut: CommandShortcut,
+  Footer: CommandFooter,
 });
 
 export {
-  COMMAND_DIALOG_NAME,
   CommandComposed as Command,
   CommandDialog,
   CommandInput,
   CommandList,
+  CommandLoading,
   CommandEmpty,
   CommandGroup,
   CommandItem,
-  CommandShortcut,
   CommandSeparator,
+  CommandShortcut,
+  CommandFooter,
 };
