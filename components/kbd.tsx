@@ -103,7 +103,7 @@ const Kbd = ({
     <kbd
       data-slot="kbd"
       className={cn(
-        "hidden sm:flex items-center gap-1 px-1.5 py-0.5 bg-background text-muted-foreground text-[9px] font-mono rounded-sm shadow-sm border border-muted",
+        "bg-background text-muted-foreground flex h-5 items-center justify-center gap-1 rounded border border-border px-1 font-sans text-[0.7rem] font-medium [&_svg:not([class*='size-'])]:size-3",
         className
       )}
       {...props}

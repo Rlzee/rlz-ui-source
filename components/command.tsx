@@ -96,7 +96,7 @@ const CommandInput = ({
       />
       {kbd && (
         <Kbd
-          className="hidden sm:flex items-center gap-1 px-1.5 py-0.5 text-[12px] font-mono rounded-md shadow-sm transition cursor-pointer"
+          className="hidden sm:flex cursor-pointer"
           shortcutKey="Esc"
           onClick={() => closeDialog(CommandDialogName)}
         />
