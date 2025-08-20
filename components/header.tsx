@@ -2,7 +2,6 @@ import { ComponentProps, ReactNode } from "react";
 import { cn } from "@ui/lib/utils";
 import { Button, type buttonVariantTypes } from "@ui/components/button";
 import { Popover } from "@ui/components/popover";
-import Link, { LinkProps } from "next/link";
 
 /* --------------------------- Header --------------------------- */
 
@@ -84,9 +83,9 @@ const HeaderNavLink = ({
       size="sm"
       className={variant === "link" ? "px-2" : ""}
     >
-      <Link href={href} className={cn(isActive && "text-primary")}>
+      <a href={href} className={cn(isActive && "text-primary")}>
         {children}
-      </Link>
+      </a>
     </Button>
   );
 };
@@ -187,7 +186,8 @@ const HeaderMobileGroup = ({
 
 /* --------------------------- Header Mobile Link --------------------------- */
 
-interface HeaderMobileLinkProps extends LinkProps {
+interface HeaderMobileLinkProps {
+  href: string;
   onOpenChange: (open: boolean) => void;
   children: ReactNode;
   className?: string;
@@ -202,7 +202,7 @@ const HeaderMobileLink = ({
 }: HeaderMobileLinkProps) => {
 
   return (
-    <Link
+    <a
       href={href}
       onClick={() => {
         onOpenChange?.(false);
@@ -211,7 +211,7 @@ const HeaderMobileLink = ({
       {...props}
     >
       {children}
-    </Link>
+    </a>
   );
 };
 
