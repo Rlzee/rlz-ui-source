@@ -2,7 +2,6 @@ import { ComponentProps, ComponentPropsWithoutRef } from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cva, VariantProps } from "class-variance-authority";
 import { ChevronDownIcon } from "lucide-react";
-import Link from "next/link";
 import { cn } from "@ui/lib/utils";
 
 /* ------------------------------ Root Navigation Menu ------------------------------ */
@@ -195,12 +194,12 @@ const NavigationMenuListItem = ({
   return (
     <li {...props}>
       <NavigationMenuLink asChild data-slot="navigation-menu-list-item">
-        <Link href={href}>
+        <a href={href}>
           <div className="text-sm leading-none font-medium">{title}</div>
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
-        </Link>
+        </a>
       </NavigationMenuLink>
     </li>
   );
