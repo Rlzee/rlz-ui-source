@@ -116,12 +116,14 @@ const HeaderMobileTrigger = ({
 const HeaderMobileContent = ({
   children,
   className,
-}: ComponentProps<typeof Popover.Content>) => {
+  blur = false,
+}: ComponentProps<typeof Popover.Content> & { blur?: boolean }) => {
   return (
     <Popover.Content
       className={cn(
         "flex lg:hidden",
-        "bg-background/90 no-scrollbar h-(--radix-popper-available-height) w-(--radix-popper-available-width) overflow-y-auto rounded-none border-none p-0 shadow-none backdrop-blur duration-100",
+        blur ? "bg-background/90 backdrop-blur" : "bg-background",
+        "no-scrollbar h-(--radix-popper-available-height) w-(--radix-popper-available-width) overflow-y-auto rounded-none border-none p-0 shadow-none duration-100",
         className
       )}
       align="start"
