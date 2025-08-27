@@ -3,9 +3,9 @@ import { cn } from "@ui/lib/utils";
 
 /* ------------------------------ Root Table ------------------------------ */
 
-const Table = ({ className, ...props }: ComponentProps<"table">) => {
+const Table = ({ className, containerClassName, ...props }: ComponentProps<"table"> & { containerClassName?: string }) => {
   return (
-    <div data-slot="table-wrapper" className="relative w-full overflow-x-auto">
+    <div data-slot="table-wrapper" className={cn("relative w-full overflow-x-auto", containerClassName)}>
       <table
         data-slot="table"
         className={cn("w-full caption-bottom text-sm", className)}
