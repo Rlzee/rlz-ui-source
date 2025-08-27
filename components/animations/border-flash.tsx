@@ -152,7 +152,7 @@ const BorderFlashBox: React.FC<BorderFlashBoxProps> = ({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 bg-background text-left">{children}</div>
+      <div className="relative bg-background text-left">{children}</div>
     </div>
   );
 };
