@@ -51,7 +51,7 @@ const AvatarFallback = ({
   return (
     <AvatarPrimitive.Fallback
       className={cn(
-        "bg-background-secondary border flex size-full items-center justify-center rounded-full font-medium",
+        "bg-background-secondary flex size-full items-center justify-center rounded-full font-medium",
         className
       )}
       {...props}
