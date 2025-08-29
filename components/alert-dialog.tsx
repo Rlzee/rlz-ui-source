@@ -1,5 +1,5 @@
 import { Dialog } from "@ui/components/dialog";
-import { Button, ButtonVariant } from "@ui/components/button";
+import { Button, buttonVariantTypes } from "@ui/components/button";
 import { useDialog } from "@ui/stores/dialog.store";
 import { useId } from "react";
 
@@ -8,8 +8,8 @@ const ALERT_DIALOG_NAME = "alert-dialog";
 export type AlertDialogParams = {
   ConfirmText?: string;
   CloseText?: string;
-  ConfirmVariant?: ButtonVariant;
-  CloseVariant?: ButtonVariant;
+  ConfirmVariant?: buttonVariantTypes;
+  CloseVariant?: buttonVariantTypes;
   title?: string;
   description?: string;
   onConfirm?: () => void | Promise<void>;
