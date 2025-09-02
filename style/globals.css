@@ -105,20 +105,13 @@
   --warning: oklch(0.7924 0.2066 101.27);
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-space-grotesk), sans-serif;
+/* Text Selection */
+::selection {
+  background-color: var(--color-foreground);
+  color: var(--color-black);
 }
 
-body {
-  font-family: var(--font-inter), sans-serif;
-}
-
-input[type="password"]::-ms-reveal,
-input[type="password"]::-ms-clear,
-input[type="password"]::-webkit-contacts-auto-fill-button,
-input[type="password"]::-webkit-credentials-auto-fill-button,
-input[type="password"]::-webkit-textfield-decoration-container {
-  display: none !important;
+::-moz-selection {
+  background-color: var(--color-foreground);
+  color: var(--color-black);
 }
