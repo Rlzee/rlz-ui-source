@@ -27,7 +27,16 @@ const Divider = ({
           )}
         ></div>
       ) : null}
-      <span className="shrink-0 px-4 text-muted-foreground">{children}</span>
+      <span
+        className={cn(
+          "shrink-0 text-muted-foreground",
+          position === "center" && "px-4",
+          position === "left" && "pr-4",
+          position === "right" && "pl-4"
+        )}
+      >
+        {children}
+      </span>
       {position === "left" || position === "center" ? (
         <div
           className={cn(
