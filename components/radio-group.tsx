@@ -63,14 +63,33 @@ const RadioGroupIndicator = ({
 
 /* ------------------------------ Radio Group Icon ------------------------------ */
 
-const RadioGroupIcon = ({ className }: { className?: string }) => {
+const RadioGroupIcon = ({
+  className,
+  icon,
+}: {
+  className?: string;
+  icon?: ReactNode;
+}) => {
   return (
-    <CircleIcon
-      className={cn(
-        "fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2",
-        className
+    <>
+      {icon ? (
+        <span
+          className={cn(
+            "size-2 flex items-center justify-center text-primary fill-primary",
+            className
+          )}
+        >
+          {icon}
+        </span>
+      ) : (
+        <CircleIcon
+          className={cn(
+            "fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2",
+            className
+          )}
+        />
       )}
-    />
+    </>
   );
 };
 
