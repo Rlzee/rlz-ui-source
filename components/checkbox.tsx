@@ -1,4 +1,4 @@
-import { ComponentProps } from "react";
+import { ComponentProps, ReactNode } from "react";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { CheckIcon } from "lucide-react";
 import { cn } from "@ui/lib/utils";
@@ -50,9 +50,13 @@ const CheckboxIndicator = ({
 
 /* ------------------------------ Checkbox Icon ------------------------------ */
 
-const CheckboxIcon = ({ className }: { className?: string }) => {
+const CheckboxIcon = ({ className, icon }: { className?: string; icon?: ReactNode }) => {
   return (
-    <CheckIcon className={cn("size-3.5 text-primary-foreground", className)} />
+    <>
+      {icon ? (
+        <span className={cn("size-3.5 text-primary-foreground flex items-center justify-center", className)}>{icon}</span>
+      ) : <CheckIcon className={cn("size-3.5 text-primary-foreground", className)} />}
+    </>
   );
 };
 
