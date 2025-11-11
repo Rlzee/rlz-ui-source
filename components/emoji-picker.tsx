@@ -34,7 +34,7 @@ function EmojiPickerSearch({
 }: React.ComponentProps<typeof EmojiPickerPrimitive.Search>) {
   return (
     <div
-      className={cn("flex h-9 items-center gap-2 border-b px-2", className)}
+      className={cn("flex h-9 items-center gap-2 border-border border-b px-2", className)}
       data-slot="emoji-picker-search"
     >
       <SearchIcon className="size-4 shrink-0 opacity-50" />
