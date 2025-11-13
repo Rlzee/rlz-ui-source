@@ -36,8 +36,6 @@ const AlertDialog = () => {
     }
   };
 
-  if (!params) return null;
-
   return (
     <Dialog
       open={isOpen}
