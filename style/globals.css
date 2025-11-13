@@ -78,10 +78,10 @@
 .dark {
   /* Background */
   --background: oklch(0 0 0);
-  --background-secondary: oklch(0.18 0 0);
+  --background-secondary: hsl(0, 0%, 5%);
 
   /* Border */
-  --border: oklch(100% 0.00011 271.152 / 0.123);
+  --border: hsl(0, 0%, 18%);
 
   /* Text */
   --foreground: oklch(0.985 0 0);
@@ -91,13 +91,13 @@
   /* Button, Input */
   --primary: oklch(0.627 0.2 264.4);
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(22.76% 0 0);
+  --secondary: hsl(0, 0%, 8%);
   --secondary-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.627 0.233 29.2);
   --destructive-foreground: oklch(1 0 0);
 
   /* Popover, Dialog, Toast... */
-  --popover: oklch(0.18 0 0);
+  --popover: hsl(0, 0%, 4%);
   --popover-foreground: oklch(0.95 0 0);
 
   --success: oklch(0.7262 0.1805 148.55);
