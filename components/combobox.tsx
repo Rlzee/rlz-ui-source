@@ -84,7 +84,7 @@ const ComboboxInput = ({
 }: ComboboxInputProps) => {
   return (
     <Command.Input
-      className={cn("h-9", className)}
+      className={className}
       data-slot="combobox-input"
       placeholder={placeholder}
       kbd={false} // No Esc shortcut in combobox
@@ -98,17 +98,25 @@ interface ComboboxListProps extends ComponentProps<typeof Command.List> {
   placeholder?: string;
 }
 
-const ComboboxList = ({
-  children,
-  className,
-  placeholder = "No results found",
-  ...props
-}: ComboboxListProps) => {
+const ComboboxList = ({ children, className, ...props }: ComboboxListProps) => {
   return (
     <Command.List className={className} {...props} data-slot="combobox-list">
-      <Command.Empty>{placeholder}</Command.Empty>
       {children}
     </Command.List>
+  );
+};
+
+/* ------------------------------ Combobox Empty ------------------------------ */
+
+const ComboboxEmpty = ({
+  children,
+  className,
+  ...props
+}: ComponentProps<typeof Command.Empty>) => {
+  return (
+    <Command.Empty {...props} className={cn("text-sm", className)} data-slot="combobox-empty">
+      {children}
+    </Command.Empty>
   );
 };
 
@@ -122,18 +130,6 @@ const ComboboxGroup = (props: ComponentProps<typeof Command.Group>) => {
 
 const ComboboxItem = (props: ComponentProps<typeof Command.Item>) => {
   return <Command.Item {...props} data-slot="combobox-item" />;
-};
-
-/* ------------------------------ Combobox Separator ------------------------------ */
-
-const ComboboxSeparator = (props: ComponentProps<"div">) => {
-  return (
-    <div
-      className="border-t border-border my-1"
-      data-slot="combobox-separator"
-      {...props}
-    />
-  );
 };
 
 /* ------------------------------ Combobox Label ------------------------------ */
@@ -165,9 +161,9 @@ const ComboboxComposed = Object.assign(Combobox, {
   Content: ComboboxContent,
   Input: ComboboxInput,
   List: ComboboxList,
+  Empty: ComboboxEmpty,
   Group: ComboboxGroup,
   Item: ComboboxItem,
-  Separator: ComboboxSeparator,
   Label: ComboboxLabel,
 });
 
@@ -178,8 +174,8 @@ export {
   ComboboxContent,
   ComboboxInput,
   ComboboxList,
+  ComboboxEmpty,
   ComboboxGroup,
   ComboboxItem,
-  ComboboxSeparator,
   ComboboxLabel,
 };
