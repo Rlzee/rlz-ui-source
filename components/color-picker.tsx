@@ -7,7 +7,7 @@ import {
 } from "react";
 import { cn } from "@ui/lib/utils";
 import Saturation from "@uiw/react-color-saturation";
-import { Slider } from "./slider";
+import { Slider } from "@ui/components/slider";
 import {
   hexToHsva,
   hsvaToHex,
@@ -16,11 +16,12 @@ import {
   hslaToHsva,
   rgbaToHsva,
 } from "@uiw/color-convert";
-import { Combobox } from "./combobox";
+import { Combobox } from "@ui/components/combobox";
 import { Check } from "lucide-react";
-import { InputCopy } from "@ui/components/custom/input/input-copy";
+import { InputAddon } from "@ui/components/input-addon";
 import { PipetteIcon } from "lucide-react";
 import { Button } from "@ui/components/button";
+import { Clipboard } from "@ui/components/clipboard";
 
 /* ---------------------------------- Types ---------------------------------- */
 
@@ -244,7 +245,18 @@ const ColorPickerFormatSelector = ({
 
 /* ------------------------------- Color Picker Input ------------------------------- */
 
-const ColorPickerInput = () => {
+type ColorPickerInputProps = ComponentProps<typeof Clipboard> & {
+  readOnly?: boolean;
+  className?: string;
+  classeNameAddon?: string;
+};
+
+const ColorPickerInput = ({
+  readOnly,
+  className,
+  classeNameAddon,
+  ...props
+}: ColorPickerInputProps) => {
   const { color, format } = useColor();
 
   const getFormattedColor = () => {
@@ -272,7 +284,20 @@ const ColorPickerInput = () => {
     )}%)`;
   };
 
-  return <InputCopy value={getFormattedColor()} />;
+  return (
+    <InputAddon
+      className={cn("pe-9", className)}
+      type="text"
+      value={getFormattedColor()}
+      readOnly={readOnly}
+      onFocus={(e) => e.target.select()}
+      aria-label="Copy the content"
+    >
+      <InputAddon.Right className={cn("pe-0", classeNameAddon)}>
+        <Clipboard {...props} text={getFormattedColor()} />
+      </InputAddon.Right>
+    </InputAddon>
+  );
 };
 
 /* ---------------------------- Color Picker Eye Dropper ---------------------------- */
