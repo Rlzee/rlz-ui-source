@@ -23,7 +23,7 @@ const SelectTrigger = ({
   ...props
 }: SelectTriggerProps) => {
   return (
-    <SelectPrimitive.Trigger data-slot="select-trigger" {...props}>
+    <SelectPrimitive.Trigger asChild data-slot="select-trigger" {...props}>
       <Button
         variant="outline"
         className={cn("w-[200px] justify-between", className)}
