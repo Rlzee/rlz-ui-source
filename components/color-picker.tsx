@@ -245,16 +245,18 @@ const ColorPickerFormatSelector = ({
 
 /* ------------------------------- Color Picker Input ------------------------------- */
 
-type ColorPickerInputProps = ComponentProps<typeof Clipboard> & {
+type ColorPickerInputProps = ComponentProps<typeof InputAddon> & {
   readOnly?: boolean;
   className?: string;
-  classeNameAddon?: string;
+  classNameAddon?: string;
+  clipboardProps?: ComponentProps<typeof Clipboard>;
 };
 
 const ColorPickerInput = ({
-  readOnly,
+  readOnly = true,
   className,
-  classeNameAddon,
+  classNameAddon,
+  clipboardProps,
   ...props
 }: ColorPickerInputProps) => {
   const { color, format } = useColor();
@@ -292,9 +294,10 @@ const ColorPickerInput = ({
       readOnly={readOnly}
       onFocus={(e) => e.target.select()}
       aria-label="Copy the content"
+      {...props}
     >
-      <InputAddon.Right className={cn("pe-0", classeNameAddon)}>
-        <Clipboard {...props} text={getFormattedColor()} />
+      <InputAddon.Right className={cn("pe-0", classNameAddon)}>
+        <Clipboard text={getFormattedColor()} {...clipboardProps} />
       </InputAddon.Right>
     </InputAddon>
   );
