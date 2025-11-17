@@ -26,13 +26,17 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
-  /* Button, Input */
+  /* Button */
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+
+  /* Input */
+  --color-input: var(--input);
+  --color-input-foreground: var(--input-foreground);
 
   /* Popover, Dialog, Toast... */
   --color-popover: var(--popover);
@@ -54,17 +58,24 @@
 
   /* Border */
   --border: oklch(90% 0.007 270);
+
   /* Text */
   --foreground: oklch(0.145 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  /* Button, Input */
+
+  /* Button */
   --primary: oklch(0% 0 0);
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.627 0.233 29.2);
   --destructive-foreground: oklch(1 0 0);
+
+  /* Input */
+  --input: oklch(0.97 0 0);
+  --input-foreground: oklch(0.145 0 0);
+
   /* Popover, Dialog, Toast... */
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0 0);
@@ -88,13 +99,17 @@
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
 
-  /* Button, Input */
+  /* Button */
   --primary: oklch(0.627 0.2 264.4);
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(22.76% 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.627 0.233 29.2);
   --destructive-foreground: oklch(1 0 0);
+
+  /* Input */
+  --input: oklch(22.76% 0 0);
+  --input-foreground: oklch(0.985 0 0);
 
   /* Popover, Dialog, Toast... */
   --popover: hsl(0, 0%, 5%);
