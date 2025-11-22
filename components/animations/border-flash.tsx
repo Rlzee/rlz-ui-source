@@ -132,12 +132,12 @@ const BorderFlashBox: React.FC<BorderFlashBoxProps> = ({
       className={cn("relative w-full p-6", className)}
     >
       {/* Top border */}
-      <div className="absolute inset-x-0 top-0 mx-[1px]">
+      <div className="absolute inset-x-0 top-0 mx-px">
         <BorderFlash border="top" Animation="left" />
       </div>
 
       {/* Bottom border */}
-      <div className="absolute inset-x-0 bottom-0 mx-[1px]">
+      <div className="absolute inset-x-0 bottom-0 mx-px">
         <BorderFlash border="bottom" Animation="right" />
       </div>
 
