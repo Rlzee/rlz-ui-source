@@ -2,20 +2,23 @@ import { cn } from "@ui/lib/utils";
 import { ComponentProps, ReactNode } from "react";
 import { cva, VariantProps } from "class-variance-authority";
 
-const alertVariants = cva("relative w-full rounded-lg border p-4 text-sm", {
-  variants: {
-    variant: {
-      default: "bg-background-secondary text-foreground border border-border",
-      destructive: "bg-error/25 text-error border border-error",
-      warning: "bg-warning/25 text-warning border border-warning",
-      info: "bg-info/25 text-info border border-info",
-      success: "bg-success/25 text-success border border-success",
+const alertVariants = cva(
+  "relative w-full rounded-lg border p-4 text-sm bg-background-secondary  border border-border",
+  {
+    variants: {
+      variant: {
+        default: "text-foreground",
+        destructive: "text-error",
+        warning: "text-warning",
+        info: "text-info",
+        success: "text-success",
+      },
     },
-  },
-  defaultVariants: {
-    variant: "default",
-  },
-});
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+);
 
 /* ------------------------------ Root Alert ------------------------------ */
 
