@@ -18,7 +18,7 @@ import {
 } from "@uiw/color-convert";
 import { Combobox } from "@ui/components/combobox";
 import { Check } from "lucide-react";
-import { InputAddon } from "@ui/components/input-addon";
+import { InputGroup } from "@ui/components/input-group";
 import { PipetteIcon } from "lucide-react";
 import { Button } from "@ui/components/button";
 import { Clipboard } from "@ui/components/clipboard";
@@ -245,7 +245,7 @@ const ColorPickerFormatSelector = ({
 
 /* ------------------------------- Color Picker Input ------------------------------- */
 
-type ColorPickerInputProps = ComponentProps<typeof InputAddon> & {
+type ColorPickerInputProps = ComponentProps<typeof InputGroup.Input> & {
   readOnly?: boolean;
   className?: string;
   classNameAddon?: string;
@@ -287,19 +287,21 @@ const ColorPickerInput = ({
   };
 
   return (
-    <InputAddon
-      className={cn("pe-9", className)}
-      type="text"
-      value={getFormattedColor()}
-      readOnly={readOnly}
-      onFocus={(e) => e.target.select()}
-      aria-label="Copy the content"
-      {...props}
-    >
-      <InputAddon.Right className={cn("pe-0", classNameAddon)}>
+    <InputGroup>
+      <InputGroup.Input
+        className={cn("pe-9", className)}
+        type="text"
+        value={getFormattedColor()}
+        readOnly={readOnly}
+        onFocus={(e) => (e.target as HTMLInputElement).select()}
+        aria-label="Copy the content"
+        {...props}
+      />
+
+      <InputGroup.Addon align="inline-end" className={cn("pe-0", classNameAddon)}>
         <Clipboard text={getFormattedColor()} {...clipboardProps} />
-      </InputAddon.Right>
-    </InputAddon>
+      </InputGroup.Addon>
+    </InputGroup>
   );
 };
 
